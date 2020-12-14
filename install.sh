@@ -11,4 +11,6 @@ ln -s ~/.dotfiles/ranger ~/.config/ranger
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 #install fish config
 cp -r ~/.dotfiles/fish ~/.config
+# install terminator config
+cp -r ~/.dotfiles/terminator ~/.config
 

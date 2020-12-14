@@ -1,0 +1,30 @@
+[global_config]
+  borderless = True
+  dbus = False
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  title_font = SauceCodePro Nerd Font Light 15
+  title_use_system_font = False
+  window_state = fullscreen
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    allow_bold = False
+    cursor_color = "#fcfcfa"
+    cursor_color_fg = False
+    cursor_shape = underline
+    font = SauceCodePro Nerd Font Light 13
+    foreground_color = "#fcfcfa"
+    palette = "#403e41:#ff6188:#a9dc76:#ffd866:#fc9867:#ab9df2:#78dce8:#fcfcfa:#727072:#ff6188:#a9dc76:#ffd866:#fc9867:#ab9df2:#78dce8:#fcfcfa"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
