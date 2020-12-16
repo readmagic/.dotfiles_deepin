@@ -6,9 +6,9 @@ va.sh 增加音量 ctrl+[
 
 vr.sh 减少音量 ctrl+]
 
-window_left.sh 窗口靠左 alt+l
+window_left.sh 窗口靠左 alt+h
 
-windows_rigth.sh 窗口靠右 alt+r
+windows_rigth.sh 窗口靠右 alt+l
 
 ### deepin 快捷键
 ![shortcut_1](deepin_shortcut_1.png)
