@@ -1,5 +1,4 @@
 let mapleader=" "
-
 "" Basic {
   " Dir {
     " set undodir=~/.undo//
@@ -119,8 +118,6 @@ let mapleader=" "
     "Reselect visual block after indent/outdent.调整缩进后自动选中，方便再次操作
     vnoremap < <gv
     vnoremap > >gv
-    " save
-    cmap w!! w !sudo tee >/dev/null %
     "markdown 
     nmap <C-s> <Plug>MarkdownPreview
     nmap <M-s> <Plug>MarkdownPreviewStop
@@ -178,7 +175,8 @@ let mapleader=" "
       Plug 'godlygeek/tabular'
       Plug 'plasticboy/vim-markdown'
       Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-
+      "保存时获取root权限"
+      Plug 'lambdalisue/suda.vim'
       " 主题插件
       Plug 'w0ng/vim-hybrid'
       Plug 'morhetz/gruvbox'
@@ -197,6 +195,11 @@ let mapleader=" "
       colorscheme pablo  
       set background=dark
   " }
+
+  " suda {
+      let g:suda_smart_edit = 1
+  " }
+  
   " Makdown {
         " set to 1, nvim will open the preview window after entering the markdown buffer
         " default: 0
