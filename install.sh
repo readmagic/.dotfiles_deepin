@@ -19,3 +19,9 @@ cd autojump
 ./install.py
 cd ..
 rm -rf autojump
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~.fzf
+cd ~/.fzf/
+./install
+
+
