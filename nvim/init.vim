@@ -107,13 +107,14 @@
     "endif
 
     call plug#begin('~/.config/nvim/plugged')
+      " 文件树
       Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
       Plug 'kristijanhusak/defx-icons'
       "Plug 'Shougo/unite.vim'
       "Plug 'Shougo/neomru.vim'
       "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
       "Plug 'zchee/deoplete-jedi'
-      Plug 'mbbill/undotree'
+      "Plug 'mbbill/undotree'
       "Plug 'scrooloose/nerdtree'
       "Plug 'tpope/vim-commentary'
       "Plug 'airblade/vim-gitgutter'
@@ -123,13 +124,19 @@
       "Plug 'scrooloose/syntastic'
       "Plug 'majutsushi/tagbar'
       "Plug 'bronson/vim-trailing-whitespace'
-      Plug 'editorconfig/editorconfig-vim'
-      Plug 'Yggdroot/indentLine'
+      "Plug 'editorconfig/editorconfig-vim'
+      "Plug 'Yggdroot/indentLine'
+      " 启动VIM快速导航
       Plug 'mhinz/vim-startify'
+      " 底部状态增强/美化 
       Plug 'vim-airline/vim-airline'
       Plug 'vim-airline/vim-airline-themes'
-
-      " Color thems
+      " markdown
+      Plug 'godlygeek/tabular' "必要插件，安装在vim-markdown前面
+      Plug 'plasticboy/vim-markdown'
+      " COC智能补全
+      Plug 'neoclide/coc.nvim', {'branch': 'release'}
+      " 主题插件
       Plug 'w0ng/vim-hybrid'
       Plug 'morhetz/gruvbox'
 
