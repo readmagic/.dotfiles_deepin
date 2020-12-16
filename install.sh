@@ -13,4 +13,9 @@ ln -s ~/.dotfiles/nvim ~/.config/nvim
 cp -r ~/.dotfiles/fish ~/.config
 # install terminator config
 cp -r ~/.dotfiles/terminator ~/.config
-
+# install autojump
+git clone git://github.com/joelthelion/autojump.git
+cd autojump
+./install.py
+cd ..
+rm -rf autojump
