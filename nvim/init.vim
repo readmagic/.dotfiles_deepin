@@ -17,6 +17,8 @@ let mapleader=" "
     set fileencodings=utf-8
   " }
 
+  
+
   " Tabs {
     set tabstop=4
     set softtabstop=0
@@ -72,7 +74,6 @@ let mapleader=" "
   " Cursor {
     set ruler
     set number
-    set cursorline
     set scrolloff=3
   "}
 
@@ -110,11 +111,10 @@ let mapleader=" "
     nnoremap ; :
 
     " Copy to system clipboard
-    noremap <Leader>y "*y
-    noremap <Leader>p "*p
     vnoremap Y "+y
     " jk 替换 Esc
     inoremap jk <Esc>
+    inoremap <Esc> <Nop>
     "Reselect visual block after indent/outdent.调整缩进后自动选中，方便再次操作
     vnoremap < <gv
     vnoremap > >gv
@@ -122,16 +122,11 @@ let mapleader=" "
     nmap <C-s> <Plug>MarkdownPreview
     nmap <M-s> <Plug>MarkdownPreviewStop
     nmap <C-p> <Plug>MarkdownPreviewToggle
-  "   cnoreabbrev W! w!
-  "   cnoreabbrev Q! q!
-  "   cnoreabbrev Qall! qall!
-  "   cnoreabbrev Wq wq
-  "   cnoreabbrev Wa wa
-  "   cnoreabbrev wQ wq
-  "   cnoreabbrev WQ wq
-  "   cnoreabbrev W w
-  "   cnoreabbrev Q q
-  "   cnoreabbrev Qall qall
+    "Defx
+    " 使用 ;e 切换显示文件浏览，使用 ;a 查找到当前文件位置
+    nnoremap <silent> <leader>e :Defx -resume -toggle -buffer-name=tab`tabpagenr()`<cr>
+    nnoremap <silent> <leader>a :Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<cr>
+
   "}
 
 "" }
@@ -196,7 +191,7 @@ let mapleader=" "
       set background=dark
   " }
 
-  " suda {
+  " Suda {
       let g:suda_smart_edit = 1
   " }
   
@@ -294,11 +289,7 @@ let mapleader=" "
   " }
 
   "Defx {
-    " 使用 ;e 切换显示文件浏览，使用 ;a 查找到当前文件位置
-    let g:maplocalleader=';'
-    nnoremap <silent> <localleader>e :Defx -resume -toggle -buffer-name=tab`tabpagenr()`<cr>
-    nnoremap <silent> <localleader>a :Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<cr>
-    
+        
     function! s:defx_mappings() abort
         	" defx window keyboard mappings
         	setlocal signcolumn=no
@@ -321,52 +312,10 @@ let mapleader=" "
     
     autocmd  filetype defx call s:defx_mappings()
   "}
-  " NERDTree {
-      " set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-      " let g:NERDTreeChDirMode=2
-      " let NERDTreeShowHidden=1
-      " let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
-      "let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
-      " let g:NERDTreeShowBookmarks=1
-      " let g:nerdtree_tabs_focus_on_files=1
-      " let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-      " let g:NERDTreeWinSize=30
-
-      " NERDTree KeyMapping
-      " Locate current file in file systems
-      " nnoremap <silent> <Leader>l :NERDTreeFind<CR>
-      " noremap <F2> :NERDTreeToggle<CR>
-      " Close NERDTree if no other window open
-      " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-  " }
-
-  " vim-commentray {
-      " to support other file type
-      " autocmd FileType apache setlocal commentstring=#\ %s
-  " }
-
-  " fugitive-git {
-    " noremap <Leader>ga :Gwrite<CR>
-    " noremap <Leader>gc :Gcommit<CR>
-    " noremap <Leader>gsh :Gpush<CR>
-    " noremap <Leader>gll :Gpull<CR>
-    " noremap <Leader>gs :Gstatus<CR>
-    " noremap <Leader>gb :Gblame<CR>
-    " noremap <Leader>gd :Gvdiff<CR>
-    " noremap <Leader>gr :Gremove<CR>
-  " }
-
-
-  " deoplete {
-    " let g:deoplete#enable_at_startup = 1
-    " let g:deoplete#enable_smart_case = 1
-    " deoplete tab-complete
-    " inoremap <expr><tab> pumvisible() ? "\<c-n>" :"\<tab>"
-  " }
 
 "" }
 
-""{ keyboard 
+""{ Keyboard 
     " 解决在插入模式下输入中文，然后进入命令行模式，中文可以自动切换回英文
         let g:input_toggle = 0
         function! Fcitx2en()

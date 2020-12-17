@@ -9,6 +9,8 @@ ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/ranger ~/.config/ranger
 #install nvim config
 ln -s ~/.dotfiles/nvim ~/.config/nvim
+#install ideavim config
+ln -s ~/.dotfiles/idea/.ideavimrc ~/.ideavimrc
 #install fish config
 cp -r ~/.dotfiles/fish ~/.config
 # install terminator config

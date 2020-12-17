@@ -1,0 +1,112 @@
+"==========================================
+" Author:  frandy
+" Version: 0.1
+" Desc: my ideavim config file
+"==========================================
+
+" set leader key
+let mapleader = " "
+" basic
+set multiple-cursors
+set nu
+set showmode
+set clipboard=unnamed
+set clipboard+=ideaput
+
+" search
+set hlsearch
+set incsearch
+set smartcase
+set ignorecase
+
+" plugins
+set easymotion
+set surround
+
+" basic key mapping
+inoremap <Up> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+inoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+inoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+inoremap <Right> <Nop>
+
+nnoremap L $
+nnoremap H ^
+vnoremap L $
+vnoremap H ^
+nnoremap ; :
+inoremap <Esc> <Nop>
+inoremap jk <Esc>
+
+" clear the highlighted search result
+nnoremap <leader>sc :nohlsearch<CR>
+
+" Move half page faster
+nnoremap <leader>d  <C-d>
+nnoremap <leader>u  <C-u>
+
+" Window operation
+nnoremap <leader>ww <C-W>w
+nnoremap <leader>wd <C-W>c
+nnoremap <leader>j <C-W>j
+nnoremap <leader>k <C-W>k
+nnoremap <leader>h <C-W>h
+nnoremap <leader>l <C-W>l
+nnoremap <leader>- <C-W>s
+nnoremap <leader>\| <C-W>v
+
+" copy and paste
+vnoremap Y "+y
+
+" Tab operation
+nnoremap E gt
+nnoremap R gT
+
+" Insert mode shortcut
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-d> <Delete>
+
+" Quit normal mode
+nnoremap <Space>q  :q<CR>
+nnoremap <Space>Q  :qa!<CR>
+
+"Reselect visual block after indent/outdent.调整缩进后自动选中，方便再次操作
+vnoremap < <gv
+vnoremap > >gv
+
+
+" intellij built in key map
+nnoremap <leader>a :action GotoAction<CR>
+nnoremap <leader>b :action Bookmarks<CR>
+nnoremap <leader>c :action GotoClass<CR>
+nnoremap <leader>e :action SearchEverywhere<CR>
+nnoremap <leader>f :action FindInPath<CR>
+nnoremap <leader>gc :action Git.CompareWithBranch<CR>
+nnoremap <leader>gr :action Git.ResolveConflicts<CR
+nnoremap <leader>ga :action Annotate<CR>
+nnoremap <leader>or :action FileMenu<CR>
+nnoremap <leader>r :action RecentFiles<CR>
+nnoremap <leader>s :action FileStructurePopup<CR>
+
+" navigation
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gb :action JumpToLastChange<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gr :action RenameElement<CR>
+
+" code actions
+nnoremap U :action FindUsages<CR>
+nnoremap R :action RenameElement<CR>
+nnoremap == :action ReformatCode<CR>
+vnoremap = :action ReformatCode<CR>
+nnoremap cc :action CommentByLineComment<CR>
+vnoremap cc :action CommentByLineComment<CR>
