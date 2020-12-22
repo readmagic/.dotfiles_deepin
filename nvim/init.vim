@@ -114,6 +114,7 @@ let mapleader=" "
     vnoremap Y "+y
     " jk 替换 Esc
     inoremap jk <Esc>
+    vnoremap jk <Esc>
     inoremap <Esc> <Nop>
     "Reselect visual block after indent/outdent.调整缩进后自动选中，方便再次操作
     vnoremap < <gv

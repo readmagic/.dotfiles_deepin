@@ -40,7 +40,7 @@ vnoremap H ^
 nnoremap ; :
 inoremap <Esc> <Nop>
 inoremap jk <Esc>
-
+vnoremap jk <Esc>
 " clear the highlighted search result
 nnoremap <leader>sc :nohlsearch<CR>
 
