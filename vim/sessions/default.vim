@@ -2,16 +2,15 @@ let SessionLoad = 1
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/.dotfiles/nvim
+cd ~/
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 init.vim
+badd +0 Desktop/玳鸽/玳鸽开发标准.md
 argglobal
 %argdel
-$argadd init.vim
-edit init.vim
+edit Desktop/玳鸽/玳鸽开发标准.md
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -21,21 +20,27 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-setlocal fdm=manual
-setlocal fde=0
+setlocal fdm=expr
+setlocal fde=Foldexpr_markdown(v:lnum)
 setlocal fmr={{{,}}}
 setlocal fdi=#
 setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-silent! normal! zE
-let s:l = 61 - ((30 * winheight(0) + 17) / 35)
+2
+normal! zo
+2
+normal! zo
+2
+normal! zo
+let s:l = 26 - ((25 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-61
-normal! 0
+26
+normal! 033|
+lcd ~/Desktop/玳鸽
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

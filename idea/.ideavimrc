@@ -22,6 +22,8 @@ set ignorecase
 " plugins
 set easymotion
 set surround
+set multiple-cursors
+set keep-english-in-normal-and-restore-in-insert
 
 " basic key mapping
 inoremap <Up> <Nop>
