@@ -1,14 +1,15 @@
-let mapleader=" "
-"" Basic {
+let mapleader = ','
+let g:mapleader = ','
+" Basic {
   " Dir {
-    " set undodir=~/.undo//
-    " set undofile
-    " set nobackup
-    " set noswapfile
-    " set backupdir=~/.backup//
-    " set backupext=~bk
-    " set writebackup
-    " set directory=~/.swp//
+    set undodir=~/.undo/
+    set undofile
+    set nobackup
+    set noswapfile
+    set backupdir=~/.backup/
+    set backupext=~bk
+    set writebackup
+    set directory=~/.swp/
   " }
 
   " Encoding {
@@ -124,10 +125,9 @@ let mapleader=" "
     nmap <M-s> <Plug>MarkdownPreviewStop
     nmap <C-p> <Plug>MarkdownPreviewToggle
     "Defx
-    " 使用 ;e 切换显示文件浏览，使用 ;a 查找到当前文件位置
+    " 使用 <space>e 切换显示文件浏览，使用 <space>a 查找到当前文件位置
     nnoremap <silent> <leader>e :Defx -resume -toggle -buffer-name=tab`tabpagenr()`<cr>
     nnoremap <silent> <leader>a :Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<cr>
-
   "}
 
 "" }
@@ -191,6 +191,7 @@ let mapleader=" "
       colorscheme pablo  
       set background=dark
   " }
+
 
   " Suda {
       let g:suda_smart_edit = 1
