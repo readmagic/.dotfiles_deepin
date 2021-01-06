@@ -36,6 +36,8 @@ Plug 'easymotion/vim-easymotion', {'on':
    \ '<Plug>(easymotion-overwin-line)', '<Plug>(easymotion-bd-w)',
    \ '<Plug>(easymotion-overwin-w)', '<Plug>(easymotion-s)',
    \ ]}
+" 驼峰单词移动
+Plug 'chaoren/vim-wordmotion'
 " 对齐
 Plug 'junegunn/vim-easy-align', {'on': ['EasyAlign', '<Plug>(EasyAlign)']}
 " 对齐线
