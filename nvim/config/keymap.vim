@@ -52,9 +52,6 @@ nmap Q <nop>
 
 nnoremap ! :!
 
-" 复制到末尾
-nnoremap Y y$
-nnoremap vv ^vg_
 " 复制到系统剪贴板
 vnoremap Y "+y
 nnoremap P "+p
