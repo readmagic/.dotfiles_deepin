@@ -44,7 +44,7 @@ inoremap <c-h> <left>
 inoremap <c-j> <down>
 inoremap <c-k> <up>
 inoremap <c-l> <right>
-
+inoremap <C-d> <Delete>
 " 使用alt q执行宏录制功能
 nnoremap <M-q> q
 " 去除EX模式

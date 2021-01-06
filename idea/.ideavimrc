@@ -4,28 +4,29 @@
 " Desc: my ideavim config file
 "==========================================
 
-" set leader key
+" 设置leader键
 let mapleader = " "
-" basic
+" 基础配置
 set multiple-cursors
 set nu
 set showmode
 set clipboard=unnamed
 set clipboard+=ideaput
 
-" search
+" 搜索
 set hlsearch
 set incsearch
 set smartcase
 set ignorecase
 
-" plugins
+" 插件
 set easymotion
 set surround
 set multiple-cursors
 set keep-english-in-normal-and-restore-in-insert
 
-" basic key mapping
+" 键映射
+" 关闭上下左右键的作用
 inoremap <Up> <Nop>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
@@ -43,37 +44,36 @@ nnoremap ; :
 inoremap <Esc> <Nop>
 inoremap jk <Esc>
 vnoremap jk <Esc>
-" clear the highlighted search result
-nnoremap <leader>sc :nohlsearch<CR>
 
-" Move half page faster
-nnoremap <leader>d  <C-d>
-nnoremap <leader>u  <C-u>
-
-" Window operation
-nnoremap <leader>ww <C-W>w
-nnoremap <leader>wd <C-W>c
-nnoremap <leader>j <C-W>j
-nnoremap <leader>k <C-W>k
-nnoremap <leader>h <C-W>h
-nnoremap <leader>l <C-W>l
-nnoremap <leader>- <C-W>s
-nnoremap <leader>\| <C-W>v
-
-" copy and paste
+" 关闭搜索颜色
+nnoremap <BackSpace> :nohl<cr>
+" 复制到末尾
+nnoremap Y y$
+nnoremap vv ^vg_
+" 复制到系统剪贴板
 vnoremap Y "+y
+nnoremap P "+p
 
-" Tab operation
+" 窗口相关快捷键
+noremap <c-h> <C-w>h
+noremap <c-j> <C-w>j
+noremap <c-k> <C-w>k
+noremap <c-l> <C-w>l
+" 关闭窗口
+nnoremap <silent> q <esc>:close<cr>
+vnoremap <silent> q <esc>:close<cr>
+
+" Tab的操作
 nnoremap E gt
 nnoremap R gT
 
-" Insert mode shortcut
+" 插入模式下的快捷键
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 inoremap <C-a> <Home>
-inoremap <C-e> <End>
+inoremap <-e> <End>
 inoremap <C-d> <Delete>
 
 " Quit normal mode
