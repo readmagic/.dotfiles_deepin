@@ -18,12 +18,12 @@ set hlsearch
 set incsearch
 set smartcase
 set ignorecase
+set keep-english-in-normal-and-restore-in-insert
 
 " 插件
 set easymotion
 set surround
 set multiple-cursors
-set keep-english-in-normal-and-restore-in-insert
 
 " 键映射
 " 关闭上下左右键的作用
@@ -73,7 +73,7 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 inoremap <C-a> <Home>
-inoremap <-e> <End>
+inoremap <C-e> <End>
 inoremap <C-d> <Delete>
 
 " Quit normal mode
